@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_B1EM0IRcEeiMatfD4Z0HAQ" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_HS02AIRcEeiMatfD4Z0HAQ" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
   <bpmn2:itemDefinition id="_applicantCaseIdItem" structureRef="String"/>
+  <bpmn2:signal id="_41f81cb0-9ea2-3b37-b3af-5b08d6ca8ee8" name="onboardEmployee-#{applicantCaseId}"/>
   <bpmn2:process id="src.employee-onboarding" drools:adHoc="true" drools:packageName="org.jbpm.demo.itorders" drools:version="1.0" name="employee-onboarding" isExecutable="true">
     <bpmn2:extensionElements>
       <drools:metaData name="customCaseIdPrefix">
@@ -16,14 +17,14 @@
       </bpmn2:extensionElements>
       <bpmn2:outgoing>_2EE77C49-6142-48A4-A7F9-2B5C2B43E625</bpmn2:outgoing>
       <bpmn2:dataOutput id="_F4BBE4ED-1B22-4A04-91F9-688AAE496740_applicantCaseId" drools:dtype="String" name="applicantCaseId"/>
-      <bpmn2:dataOutputAssociation id="_B1EM0oRcEeiMatfD4Z0HAQ">
+      <bpmn2:dataOutputAssociation id="_HS02AoRcEeiMatfD4Z0HAQ">
         <bpmn2:sourceRef>_F4BBE4ED-1B22-4A04-91F9-688AAE496740_applicantCaseId</bpmn2:sourceRef>
         <bpmn2:targetRef>applicantCaseId</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:outputSet id="_B1EM0YRcEeiMatfD4Z0HAQ">
+      <bpmn2:outputSet id="_HS02AYRcEeiMatfD4Z0HAQ">
         <bpmn2:dataOutputRefs>_F4BBE4ED-1B22-4A04-91F9-688AAE496740_applicantCaseId</bpmn2:dataOutputRefs>
       </bpmn2:outputSet>
-      <bpmn2:signalEventDefinition id="_B1EM04RcEeiMatfD4Z0HAQ"/>
+      <bpmn2:signalEventDefinition id="_HS02A4RcEeiMatfD4Z0HAQ" signalRef="_41f81cb0-9ea2-3b37-b3af-5b08d6ca8ee8"/>
     </bpmn2:startEvent>
     <bpmn2:scriptTask id="_50480AFA-93EC-485D-A2BC-994B3C743EB4" drools:selectable="true" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Onboarding Employee" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
@@ -45,36 +46,36 @@ System.out.println("New Employee Being Onboarded for Application: " + applicantC
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_348873CA-6632-4E6D-B307-744F4835F4BF</bpmn2:incoming>
-      <bpmn2:terminateEventDefinition id="_B1EM1IRcEeiMatfD4Z0HAQ"/>
+      <bpmn2:terminateEventDefinition id="_HS02BIRcEeiMatfD4Z0HAQ"/>
     </bpmn2:endEvent>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_B1EM1YRcEeiMatfD4Z0HAQ">
-    <bpmndi:BPMNPlane id="_B1EM1oRcEeiMatfD4Z0HAQ" bpmnElement="src.employee-onboarding">
-      <bpmndi:BPMNShape id="_B1EM14RcEeiMatfD4Z0HAQ" bpmnElement="_F4BBE4ED-1B22-4A04-91F9-688AAE496740">
+  <bpmndi:BPMNDiagram id="_HS02BYRcEeiMatfD4Z0HAQ">
+    <bpmndi:BPMNPlane id="_HS02BoRcEeiMatfD4Z0HAQ" bpmnElement="src.employee-onboarding">
+      <bpmndi:BPMNShape id="_HS02B4RcEeiMatfD4Z0HAQ" bpmnElement="_F4BBE4ED-1B22-4A04-91F9-688AAE496740">
         <dc:Bounds height="30.0" width="30.0" x="45.0" y="218.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_B1EM2IRcEeiMatfD4Z0HAQ" bpmnElement="_50480AFA-93EC-485D-A2BC-994B3C743EB4">
+      <bpmndi:BPMNShape id="_HS02CIRcEeiMatfD4Z0HAQ" bpmnElement="_50480AFA-93EC-485D-A2BC-994B3C743EB4">
         <dc:Bounds height="80.0" width="100.0" x="195.0" y="193.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_B1EM2YRcEeiMatfD4Z0HAQ" bpmnElement="_504B5A52-A2B6-4136-A815-1BF4002CE01C">
+      <bpmndi:BPMNShape id="_HS02CYRcEeiMatfD4Z0HAQ" bpmnElement="_504B5A52-A2B6-4136-A815-1BF4002CE01C">
         <dc:Bounds height="28.0" width="28.0" x="420.0" y="219.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="_B1EM2oRcEeiMatfD4Z0HAQ" bpmnElement="_2EE77C49-6142-48A4-A7F9-2B5C2B43E625" sourceElement="_B1EM14RcEeiMatfD4Z0HAQ" targetElement="_B1EM2IRcEeiMatfD4Z0HAQ">
+      <bpmndi:BPMNEdge id="_HS02CoRcEeiMatfD4Z0HAQ" bpmnElement="_2EE77C49-6142-48A4-A7F9-2B5C2B43E625" sourceElement="_HS02B4RcEeiMatfD4Z0HAQ" targetElement="_HS02CIRcEeiMatfD4Z0HAQ">
         <di:waypoint xsi:type="dc:Point" x="60.0" y="233.0"/>
         <di:waypoint xsi:type="dc:Point" x="245.0" y="233.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_B1EM24RcEeiMatfD4Z0HAQ" bpmnElement="_348873CA-6632-4E6D-B307-744F4835F4BF" sourceElement="_B1EM2IRcEeiMatfD4Z0HAQ" targetElement="_B1EM2YRcEeiMatfD4Z0HAQ">
+      <bpmndi:BPMNEdge id="_HS02C4RcEeiMatfD4Z0HAQ" bpmnElement="_348873CA-6632-4E6D-B307-744F4835F4BF" sourceElement="_HS02CIRcEeiMatfD4Z0HAQ" targetElement="_HS02CYRcEeiMatfD4Z0HAQ">
         <di:waypoint xsi:type="dc:Point" x="245.0" y="233.0"/>
         <di:waypoint xsi:type="dc:Point" x="434.0" y="233.0"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_B1EM3IRcEeiMatfD4Z0HAQ" type="BPSimData">
+  <bpmn2:relationship id="_HS02DIRcEeiMatfD4Z0HAQ" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters" baseTimeUnit="min"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_F4BBE4ED-1B22-4A04-91F9-688AAE496740" id="_B1EM3YRcEeiMatfD4Z0HAQ">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_F4BBE4ED-1B22-4A04-91F9-688AAE496740" id="_HS02DYRcEeiMatfD4Z0HAQ">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -86,14 +87,14 @@ System.out.println("New Employee Being Onboarded for Application: " + applicantC
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_348873CA-6632-4E6D-B307-744F4835F4BF" id="_B1EM3oRcEeiMatfD4Z0HAQ">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_348873CA-6632-4E6D-B307-744F4835F4BF" id="_HS02DoRcEeiMatfD4Z0HAQ">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_50480AFA-93EC-485D-A2BC-994B3C743EB4" id="_B1EM34RcEeiMatfD4Z0HAQ">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_50480AFA-93EC-485D-A2BC-994B3C743EB4" id="_HS02D4RcEeiMatfD4Z0HAQ">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -105,14 +106,14 @@ System.out.println("New Employee Being Onboarded for Application: " + applicantC
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_2EE77C49-6142-48A4-A7F9-2B5C2B43E625" id="_B1EM4IRcEeiMatfD4Z0HAQ">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_2EE77C49-6142-48A4-A7F9-2B5C2B43E625" id="_HS02EIRcEeiMatfD4Z0HAQ">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_504B5A52-A2B6-4136-A815-1BF4002CE01C" id="_B1EM4YRcEeiMatfD4Z0HAQ">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_504B5A52-A2B6-4136-A815-1BF4002CE01C" id="_HS02EYRcEeiMatfD4Z0HAQ">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -122,7 +123,7 @@ System.out.println("New Employee Being Onboarded for Application: " + applicantC
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_B1EM0IRcEeiMatfD4Z0HAQ</bpmn2:source>
-    <bpmn2:target>_B1EM0IRcEeiMatfD4Z0HAQ</bpmn2:target>
+    <bpmn2:source>_HS02AIRcEeiMatfD4Z0HAQ</bpmn2:source>
+    <bpmn2:target>_HS02AIRcEeiMatfD4Z0HAQ</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
