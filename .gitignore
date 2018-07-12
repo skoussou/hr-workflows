@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+
+# Created by https://www.gitignore.io/api/java,eclipse
+
 ### Eclipse ###
 
 */target/*
 */target/**
 target/**
+*/global/*
+global/**
+*/global/**
+
 
 .metadata
 bin/
@@ -94,4 +102,6 @@ hs_err_pid*
 
 *.DS_Store
 .DS_Store
-.vscode
+=======
+/target/
+>>>>>>> 55e1892344f496ae310bd7c7e177a93a2186a819
