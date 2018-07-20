@@ -1,0 +1,21 @@
+[
+        [
+            "name" : "googleMailSendDefinitions",
+            "displayName" : "googleMailSendDefinitions",
+            "category" : "Service",
+            "description" : "Send mail using gmail",
+            "defaultHandler" : "mvel: new com.redhat.barclays.pam.wih.google.mail.GoogleMailSendWorkitemHandler()",
+
+            "parameters" : [
+                                "to" : new StringDataType()
+
+            ],
+            "mavenDependencies" : [
+                                 "com.redhat.barclays:barclays-pam-work-item-handlers-google-mail:1.0"
+
+            ],
+            "icon" : "icon/icon.png"
+
+        ]
+
+]

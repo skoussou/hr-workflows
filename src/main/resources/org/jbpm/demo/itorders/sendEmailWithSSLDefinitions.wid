@@ -1,0 +1,22 @@
+[
+        [
+            "name" : "sendEmailWithSSLDefinitions",
+            "displayName" : "sendEmailWithSSLDefinitions",
+            "category" : "Service",
+            "description" : "Send mail using SSL",
+            "defaultHandler" : "mvel: new com.redhat.barclays.pam.wih.email.SendEmailWithSSLWorkitemHandler()",
+
+            "parameters" : [
+                                "persona" : new ObjectDataType()
+                ,"templateName" : new StringDataType()
+
+            ],
+            "mavenDependencies" : [
+                                 "com.redhat.barclays:barclays-pam-work-item-handlers-email:1.0"
+
+            ],
+            "icon" : "icon/icon.png"
+
+        ]
+
+]

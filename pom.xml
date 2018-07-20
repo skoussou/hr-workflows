@@ -6,17 +6,27 @@
   <packaging>kjar</packaging>
   <name>Barclays HR Workflows Project</name>
   <description>Case Management HR Recruitment Onboarding Project</description>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.kie</groupId>
-        <artifactId>kie-maven-plugin</artifactId>
-        <version>7.7.0.Final-redhat-7</version>
-        <extensions>true</extensions>
-      </plugin>
-    </plugins>
-  </build>
   <dependencies>
+    <dependency>
+      <groupId>com.redhat.barclays</groupId>
+      <artifactId>barclays-pam-work-item-handlers-saleforce</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.redhat.barclays</groupId>
+      <artifactId>barclays-pam-work-item-handlers-dto</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.redhat.barclays</groupId>
+      <artifactId>barclays-pam-work-item-handlers-twilio-sms</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.redhat.barclays</groupId>
+      <artifactId>barclays-pam-work-item-handlers-email</artifactId>
+      <version>1.0</version>
+    </dependency>
     <dependency>
       <groupId>org.kie</groupId>
       <artifactId>kie-api</artifactId>
@@ -72,4 +82,14 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.kie</groupId>
+        <artifactId>kie-maven-plugin</artifactId>
+        <version>7.7.0.Final-redhat-7</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
