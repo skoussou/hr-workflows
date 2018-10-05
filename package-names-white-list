@@ -1,6 +1,6 @@
-com.redhat.barclays.pam.wih.twilio.sms
-com.redhat.barclays.pam.wih.email
-com.redhat.barclays.pam.wih.saleforce.persona
-com.redhat.barclays.pam.wih.dto
-com.redhat.barclays.pam.wih.saleforce.credential
-com.redhat.barclays.pam.wih.email.templates
+com.redhat.rhdemo.pam.wih.twilio.sms
+com.redhat.rhdemo.pam.wih.email
+com.redhat.rhdemo.pam.wih.saleforce.persona
+com.redhat.rhdemo.pam.wih.dto
+com.redhat.rhdemo.pam.wih.saleforce.credential
+com.redhat.rhdemo.pam.wih.email.templates

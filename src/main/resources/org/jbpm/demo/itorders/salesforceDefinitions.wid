@@ -5,7 +5,7 @@
             "displayName" : "salesforceDefinitions",
             "category" : "Service",
             "description" : "Insert Persona object in saleforce using REST API",
-            "defaultHandler" : "mvel: new com.redhat.barclays.pam.wih.saleforce.persona.SaleforcePersonaWorkitemHandler()",
+            "defaultHandler" : "mvel: new com.redhat.rhdemo.pam.wih.saleforce.persona.SaleforcePersonaWorkitemHandler()",
 
             "parameters" : [
                                 "persona" : new ObjectDataType()
@@ -13,7 +13,7 @@
 
             ],
             "mavenDependencies" : [
-                                 "com.redhat.barclays:barclays-pam-work-item-handlers-saleforce:1.0"
+                                 "com.redhat.rhdemo:rhdemo-pam-work-item-handlers-saleforce:1.0"
 
             ],
             "icon" : "icon/icon.png"

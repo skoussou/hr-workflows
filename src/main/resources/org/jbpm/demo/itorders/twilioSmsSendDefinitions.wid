@@ -4,7 +4,7 @@
             "displayName" : "twilioSmsSendDefinitions",
             "category" : "Service",
             "description" : "Send sms using twilio",
-            "defaultHandler" : "mvel: new com.redhat.barclays.pam.wih.twilio.sms.TwilioSMSSendWorkItemHandler()",
+            "defaultHandler" : "mvel: new com.redhat.rhdemo.pam.wih.twilio.sms.TwilioSMSSendWorkItemHandler()",
 
             "parameters" : [
                 "smsBody" : new StringDataType()
@@ -16,7 +16,7 @@
 
             ],
             "mavenDependencies" : [
-                                 "com.redhat.barclays:barclays-pam-work-item-handlers-twilio-sms:1.0"
+                                 "com.redhat.rhdemo:rhdemo-pam-work-item-handlers-twilio-sms:1.0"
 
             ],
             "icon" : "icon/icon.png"

@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <artifactId>onboarding</artifactId>
-  <groupId>com.barclays.hr</groupId>
+  <groupId>com.rhdemo.hr</groupId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>kjar</packaging>
-  <name>Barclays HR Workflows Project</name>
+  <name>rhdemo HR Workflows Project</name>
   <description>Case Management HR Recruitment Onboarding Project</description>
   <dependencies>
     <dependency>
-      <groupId>com.redhat.barclays</groupId>
-      <artifactId>barclays-pam-work-item-handlers-saleforce</artifactId>
+      <groupId>com.redhat.rhdemo</groupId>
+      <artifactId>rhdemo-pam-work-item-handlers-saleforce</artifactId>
       <version>1.0</version>
     </dependency>
     <dependency>
-      <groupId>com.redhat.barclays</groupId>
-      <artifactId>barclays-pam-work-item-handlers-dto</artifactId>
+      <groupId>com.redhat.rhdemo</groupId>
+      <artifactId>rhdemo-pam-work-item-handlers-dto</artifactId>
       <version>1.0</version>
     </dependency>
     <dependency>
-      <groupId>com.redhat.barclays</groupId>
-      <artifactId>barclays-pam-work-item-handlers-twilio-sms</artifactId>
+      <groupId>com.redhat.rhdemo</groupId>
+      <artifactId>rhdemo-pam-work-item-handlers-twilio-sms</artifactId>
       <version>1.0</version>
     </dependency>
     <dependency>
-      <groupId>com.redhat.barclays</groupId>
-      <artifactId>barclays-pam-work-item-handlers-email</artifactId>
+      <groupId>com.redhat.rhdemo</groupId>
+      <artifactId>rhdemo-pam-work-item-handlers-email</artifactId>
       <version>1.0</version>
     </dependency>
     <dependency>

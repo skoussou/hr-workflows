@@ -23,13 +23,13 @@
     <work-item-handlers>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new com.redhat.barclays.pam.wih.twilio.sms.TwilioSMSSendWorkItemHandler()</identifier>
+            <identifier>new com.redhat.rhdemo.pam.wih.twilio.sms.TwilioSMSSendWorkItemHandler()</identifier>
             <parameters/>
             <name>twilioSmsSendDefinitions</name>
         </work-item-handler>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new com.redhat.barclays.pam.wih.email.SendEmailWithSSLWorkitemHandler()</identifier>
+            <identifier>new com.redhat.rhdemo.pam.wih.email.SendEmailWithSSLWorkitemHandler()</identifier>
             <parameters/>
             <name>sendEmailWithSSLDefinitions</name>
         </work-item-handler>
@@ -41,7 +41,7 @@
         </work-item-handler>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new com.redhat.barclays.pam.wih.saleforce.persona.SaleforcePersonaWorkitemHandler()</identifier>
+            <identifier>new com.redhat.rhdemo.pam.wih.saleforce.persona.SaleforcePersonaWorkitemHandler()</identifier>
             <parameters/>
             <name>salesforceDefinitions</name>
         </work-item-handler>

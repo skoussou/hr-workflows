@@ -1,4 +1,4 @@
-package com.barclays.hr.model;
+package com.rhdemo.hr.model;
 
 import java.io.Serializable;
 
@@ -6,6 +6,7 @@ import java.io.Serializable;
 public class ExtendedCaseFile extends org.kie.server.api.model.cases.CaseInstance implements Serializable {
 
   private static final long serialVersionUID = 1L;
+  
 
   private String caseOwner;
 
