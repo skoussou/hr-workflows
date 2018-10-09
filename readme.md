@@ -67,7 +67,7 @@ Steps:
 ### WIH code
 * master branch on  
 
-`ssh://git@gitlab.consulting.redhat.com:2222/pbrown/rhdemo-hr-bc-workflows.git`
+`ssh://git@gitlab.consulting.redhat.com:2222/barclays/rhdemo-pam-work-item-handlers.git`
 
 * Run `mvn clean install`
 
