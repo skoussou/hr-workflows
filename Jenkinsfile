@@ -7,14 +7,23 @@ pipeline {
 
     agent { label 'maven' }
 
+    parameters {
+        string(defaultValue: '7c32b5d2-0e25-480e-82b7-bb642a0392ed', description: 'The Jenkins Credential ID to use in order to clone the source dependencies', name: 'GIT_CREDENTIALS_ID')
+    }
+
+
     stages {
-
-        stage('Clone and Build Work Item Handlers') {
+        stage('Checkout Work Item Handlers') {
             steps {
-                dir('work-item-handlers') {
-                    git url: 'https://gitlab.consulting.redhat.com/uki-sa/pam-demo/work-item-handlers.git'
-                }
-
+                checkout([$class: 'GitSCM', 
+                branches: [[name: '*/master']], 
+                doGenerateSubmoduleConfigurations: false, 
+                extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'work-item-handlers']],
+                userRemoteConfigs: [[credentialsId: "${GIT_CREDENTIALS_ID}", url: 'ssh://git@gitlab.consulting.redhat.com:2222/uki-sa/pam-demo/work-item-handlers.git']]])
+            }
+        }
+        stage('Build Work Item Handlers') {
+            steps {
                 sh 'pushd work-item-handlers;mvn clean install;popd'
             }
         }
