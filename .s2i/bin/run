@@ -1,0 +1,13 @@
+#!/bin/bash
+set -eo pipefail
+
+/opt/eap/bin/add-user.sh -a -u 'Bob' -p 'Password1!' -g 'kie-server,interviewer' && \
+/opt/eap/bin/add-user.sh -a -u 'Ann' -p 'Password1!' -g 'kie-server,interviewer' && \
+/opt/eap/bin/add-user.sh -a -u 'Eve' -p 'Password1!' -g 'kie-server,interviewer' && \
+/opt/eap/bin/add-user.sh -a -u 'Tom' -p 'Password1!' -g 'kie-server,talent-aquisition' && \
+/opt/eap/bin/add-user.sh -a -u 'Tina' -p 'Password1!' -g 'kie-server,talent-aquisition' && \
+/opt/eap/bin/add-user.sh -a -u 'Bill' -p 'Password1!' -g 'kie-server,applicant' && \
+/opt/eap/bin/add-user.sh -a -u 'Ava' -p 'Password1!' -g 'kie-server,applicant' && \
+/opt/eap/bin/add-user.sh -a -u 'adminhr' -p 'Password1!' -g 'kie-server,admin,talent-aquisition,interviewer,applicant,rest-all,kiemgmt,Administrators'
+
+exec /usr/local/s2i/run
