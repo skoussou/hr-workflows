@@ -57,7 +57,7 @@ Steps:
 ### PAM process
 * The BPM version being used is `forum_demo` branch from
 
-`ssh://git@gitlab.consulting.redhat.com:2222/barclays/barclays-hr-bc-workflows.git`
+
 
 * Make sure you use this, it's the only one that'll run end to end
 * Run `mvn clean install` to create kjar
@@ -67,7 +67,7 @@ Steps:
 ### WIH code
 * master branch on  
 
-`ssh://git@gitlab.consulting.redhat.com:2222/barclays/rhdemo-pam-work-item-handlers.git`
+`ssh://git@gitlab.consulting.redhat.com:2222/
 
 * Run `mvn clean install`
 
@@ -102,7 +102,7 @@ curl -X PUT \
 ```
 ### Front End
 
-* The front end is in new mavenised repo ssh://git@gitlab.consulting.redhat.com:2222/barclays/client-app-maven.git although you don't use maven to run locally, just switch to app folder and run as per instrutions below
+* The front end is in new mavenised repo although you don't use maven to run locally, just switch to app folder and run as per instrutions below
 * master branch
 * there's some details in README.md file which may help
 
@@ -149,6 +149,6 @@ login: `user1 / r3dh4t1!`
 project used for Fourum is `RH HR Demo`
 
 ## Build / Deploy
-* push updated code to `forum_demo` branch on `ssh://git@gitlab.consulting.redhat.com:2222/barclays/barclays-hr-bc-workflows.git`
+* push updated code to `forum_demo` branch on `ssh://git@gitlab.consulting.redhat.com:2222
 * start OS buid
 * when new Pods are created and running, login to each pod and run the create users command/script above 
